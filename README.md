@@ -129,10 +129,15 @@ Configuration
 The following environment variables affect `repl`'s behavior:
 
 `REPL_PROMPT`:
-    the prompt to display before each line of input. defaults to >>
+    The prompt to display before each line of input. defaults to >>
+
+`REPL_PROMPT_SIMPLE`:
+    By default `REPL_PROMPT` is prefixed with the command being run,
+    e.g. 'gem>>'. Set `REPL_PROMPT_SIMPLE` to '1' to override this
+    behavior and display only `REPL_PROMPT`, e.g. '>>'
 
 `REPL_COMPLETION_DIR`:
-    directory in which completion files are kept
+    Directory in which completion files are kept
 
 
 Contributing

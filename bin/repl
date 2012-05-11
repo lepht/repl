@@ -86,8 +86,12 @@ if debug
   puts command.inspect
 end
 
+prompt = ""
+prompt += ARGV[0] unless ENV['REPL_PROMPT_SIMPLE']
+prompt += ENV['REPL_PROMPT'] || '>>'
+
 loop do
-  print ENV['REPL_PROMPT'] || "#{ARGV[0]}>> "
+  print prompt
 
   begin
     line = $stdin.gets.chomp
